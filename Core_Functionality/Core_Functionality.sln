@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core_Functionality", "Core_Functionality\Core_Functionality.vcxproj", "{577F80D0-6F10-47F9-B524-FE7198C47280}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mat_mask_operations", "mat_mask_operations\mat_mask_operations.vcxproj", "{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{577F80D0-6F10-47F9-B524-FE7198C47280}.Release|x64.Build.0 = Release|x64
 		{577F80D0-6F10-47F9-B524-FE7198C47280}.Release|x86.ActiveCfg = Release|Win32
 		{577F80D0-6F10-47F9-B524-FE7198C47280}.Release|x86.Build.0 = Release|Win32
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Debug|x64.ActiveCfg = Debug|x64
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Debug|x64.Build.0 = Debug|x64
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Debug|x86.ActiveCfg = Debug|Win32
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Debug|x86.Build.0 = Debug|Win32
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Release|x64.ActiveCfg = Release|x64
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Release|x64.Build.0 = Release|x64
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Release|x86.ActiveCfg = Release|Win32
+		{9D4DE09D-35AB-4D45-AFB5-2AAE8CE6755F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
