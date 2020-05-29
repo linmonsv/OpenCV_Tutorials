@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mat_mask_operations", "mat_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicLinearTransforms", "BasicLinearTransforms\BasicLinearTransforms.vcxproj", "{E11AF7E8-EA5B-44C7-BE41-4E54371715A0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "discrete_fourier_transform", "discrete_fourier_transform\discrete_fourier_transform.vcxproj", "{1D35779F-C2E0-4C05-9848-7791626B5AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{E11AF7E8-EA5B-44C7-BE41-4E54371715A0}.Release|x64.Build.0 = Release|x64
 		{E11AF7E8-EA5B-44C7-BE41-4E54371715A0}.Release|x86.ActiveCfg = Release|Win32
 		{E11AF7E8-EA5B-44C7-BE41-4E54371715A0}.Release|x86.Build.0 = Release|Win32
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Debug|x64.ActiveCfg = Debug|x64
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Debug|x64.Build.0 = Debug|x64
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Debug|x86.ActiveCfg = Debug|Win32
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Debug|x86.Build.0 = Debug|Win32
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Release|x64.ActiveCfg = Release|x64
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Release|x64.Build.0 = Release|x64
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Release|x86.ActiveCfg = Release|Win32
+		{1D35779F-C2E0-4C05-9848-7791626B5AF7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
