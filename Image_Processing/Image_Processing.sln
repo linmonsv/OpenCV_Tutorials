@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Smoothing_Images", "Smoothi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Eroding_and_Dilating", "Eroding_and_Dilating\Eroding_and_Dilating.vcxproj", "{43AB620A-9F8C-4246-8115-642C4D43404D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Morphology_2", "Morphology_2\Morphology_2.vcxproj", "{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{43AB620A-9F8C-4246-8115-642C4D43404D}.Release|x64.Build.0 = Release|x64
 		{43AB620A-9F8C-4246-8115-642C4D43404D}.Release|x86.ActiveCfg = Release|Win32
 		{43AB620A-9F8C-4246-8115-642C4D43404D}.Release|x86.Build.0 = Release|Win32
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Debug|x64.ActiveCfg = Debug|x64
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Debug|x64.Build.0 = Debug|x64
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Debug|x86.ActiveCfg = Debug|Win32
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Debug|x86.Build.0 = Debug|Win32
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x64.ActiveCfg = Release|x64
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x64.Build.0 = Release|x64
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x86.ActiveCfg = Release|Win32
+		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
