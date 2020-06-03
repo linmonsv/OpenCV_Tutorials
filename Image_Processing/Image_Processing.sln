@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Eroding_and_Dilating", "Ero
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Morphology_2", "Morphology_2\Morphology_2.vcxproj", "{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HitMiss", "HitMiss\HitMiss.vcxproj", "{D09A1843-2406-4570-8F16-A8FBB3FD67AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x64.Build.0 = Release|x64
 		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x86.ActiveCfg = Release|Win32
 		{56F439E5-480D-4DEC-A4EE-1716D6B16DEB}.Release|x86.Build.0 = Release|Win32
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Debug|x64.ActiveCfg = Debug|x64
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Debug|x64.Build.0 = Debug|x64
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Debug|x86.ActiveCfg = Debug|Win32
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Debug|x86.Build.0 = Debug|Win32
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Release|x64.ActiveCfg = Release|x64
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Release|x64.Build.0 = Release|x64
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Release|x86.ActiveCfg = Release|Win32
+		{D09A1843-2406-4570-8F16-A8FBB3FD67AD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
