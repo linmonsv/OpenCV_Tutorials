@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image_Processing", "Image_P
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Drawing_2", "Drawing_2\Drawing_2.vcxproj", "{19320B82-3FD9-414B-921B-8EDC1D5CE2FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Smoothing_Images", "Smoothing_Images\Smoothing_Images.vcxproj", "{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{19320B82-3FD9-414B-921B-8EDC1D5CE2FF}.Release|x64.Build.0 = Release|x64
 		{19320B82-3FD9-414B-921B-8EDC1D5CE2FF}.Release|x86.ActiveCfg = Release|Win32
 		{19320B82-3FD9-414B-921B-8EDC1D5CE2FF}.Release|x86.Build.0 = Release|Win32
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Debug|x64.ActiveCfg = Debug|x64
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Debug|x64.Build.0 = Debug|x64
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Debug|x86.ActiveCfg = Debug|Win32
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Debug|x86.Build.0 = Debug|Win32
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Release|x64.ActiveCfg = Release|x64
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Release|x64.Build.0 = Release|x64
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Release|x86.ActiveCfg = Release|Win32
+		{5B87D5CE-F4A1-4A55-A5B5-4E14405A333A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
