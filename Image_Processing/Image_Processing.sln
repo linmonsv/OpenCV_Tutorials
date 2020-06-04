@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Threshold_inRange", "Thresh
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filter2D_Demo", "filter2D_Demo\filter2D_Demo.vcxproj", "{65DBF443-8616-48B1-B020-2F9643CE24D1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "copyMakeBorder_demo", "copyMakeBorder_demo\copyMakeBorder_demo.vcxproj", "{73067DB3-86E4-4FFC-8163-DD3B5D565B34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{65DBF443-8616-48B1-B020-2F9643CE24D1}.Release|x64.Build.0 = Release|x64
 		{65DBF443-8616-48B1-B020-2F9643CE24D1}.Release|x86.ActiveCfg = Release|Win32
 		{65DBF443-8616-48B1-B020-2F9643CE24D1}.Release|x86.Build.0 = Release|Win32
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Debug|x64.ActiveCfg = Debug|x64
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Debug|x64.Build.0 = Debug|x64
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Debug|x86.ActiveCfg = Debug|Win32
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Debug|x86.Build.0 = Debug|Win32
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Release|x64.ActiveCfg = Release|x64
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Release|x64.Build.0 = Release|x64
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Release|x86.ActiveCfg = Release|Win32
+		{73067DB3-86E4-4FFC-8163-DD3B5D565B34}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
