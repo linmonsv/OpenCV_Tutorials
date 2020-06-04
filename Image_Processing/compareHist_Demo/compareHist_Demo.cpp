@@ -26,6 +26,7 @@ int main(int argc, char** argv)
         parser.printMessage();
         return -1;
     }
+    Mat base_half_down = src_base(Range(src_base.rows / 2, src_base.rows), Range(0, src_base.cols));
     Mat hsv_base, hsv_test1, hsv_test2;
     cvtColor(src_base, hsv_base, COLOR_BGR2HSV);
     cvtColor(src_test1, hsv_test1, COLOR_BGR2HSV);
