@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Affine_Transformations", "A
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EqualizeHist_Demo", "EqualizeHist_Demo\EqualizeHist_Demo.vcxproj", "{8CDB905D-F219-45F1-B61A-2F0977E72530}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "calcHist_Demo", "calcHist_Demo\calcHist_Demo.vcxproj", "{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{8CDB905D-F219-45F1-B61A-2F0977E72530}.Release|x64.Build.0 = Release|x64
 		{8CDB905D-F219-45F1-B61A-2F0977E72530}.Release|x86.ActiveCfg = Release|Win32
 		{8CDB905D-F219-45F1-B61A-2F0977E72530}.Release|x86.Build.0 = Release|Win32
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Debug|x64.ActiveCfg = Debug|x64
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Debug|x64.Build.0 = Debug|x64
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Debug|x86.ActiveCfg = Debug|Win32
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Debug|x86.Build.0 = Debug|Win32
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Release|x64.ActiveCfg = Release|x64
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Release|x64.Build.0 = Release|x64
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Release|x86.ActiveCfg = Release|Win32
+		{073C5357-76BE-4C3A-85D8-BBC903F1FBF6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
