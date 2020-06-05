@@ -26,32 +26,40 @@ int main(int argc, char* argv[])
     int R = 53;// parser.get<int>("R");
     int snr = 5200;// parser.get<int>("SNR");
     string strInFileName = "original.jpg";// parser.get<String>("image");
-    if (!parser.check())
-    {
-        parser.printErrors();
-        return 0;
+    for(R = 1; R < 100; R +=3) {
+        for (snr = 10; snr < 10000; snr += 100) {
+            if (!parser.check())
+            {
+                parser.printErrors();
+                return 0;
+            }
+            Mat imgIn;
+            imgIn = imread(strInFileName, IMREAD_GRAYSCALE);
+            if (imgIn.empty()) //check whether the image is loaded or not
+            {
+                cout << "ERROR : Image cannot be loaded..!!" << endl;
+                return -1;
+            }
+            Mat imgOut;
+            // it needs to process even image only
+            Rect roi = Rect(0, 0, imgIn.cols & -2, imgIn.rows & -2);
+            //Hw calculation (start)
+            Mat Hw, h;
+            calcPSF(h, roi.size(), R);
+            calcWnrFilter(h, Hw, 1.0 / double(snr));
+            //Hw calculation (stop)
+            // filtering (start)
+            filter2DFreq(imgIn(roi), imgOut, Hw);
+            // filtering (stop)
+            imgOut.convertTo(imgOut, CV_8U);
+            normalize(imgOut, imgOut, 0, 255, NORM_MINMAX);
+
+            char resultName[256];
+            sprintf_s(resultName, "result/result_%d_%d.jpg", R, snr);
+            imwrite(resultName, imgOut);
+            std::cout << "R : " << R << " snr : " << snr << std::endl;
+        }
     }
-    Mat imgIn;
-    imgIn = imread(strInFileName, IMREAD_GRAYSCALE);
-    if (imgIn.empty()) //check whether the image is loaded or not
-    {
-        cout << "ERROR : Image cannot be loaded..!!" << endl;
-        return -1;
-    }
-    Mat imgOut;
-    // it needs to process even image only
-    Rect roi = Rect(0, 0, imgIn.cols & -2, imgIn.rows & -2);
-    //Hw calculation (start)
-    Mat Hw, h;
-    calcPSF(h, roi.size(), R);
-    calcWnrFilter(h, Hw, 1.0 / double(snr));
-    //Hw calculation (stop)
-    // filtering (start)
-    filter2DFreq(imgIn(roi), imgOut, Hw);
-    // filtering (stop)
-    imgOut.convertTo(imgOut, CV_8U);
-    normalize(imgOut, imgOut, 0, 255, NORM_MINMAX);
-    imwrite("result.jpg", imgOut);
     return 0;
 }
 void help()
