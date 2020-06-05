@@ -55,6 +55,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "findContours_demo", "findCo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hull_demo", "hull_demo\hull_demo.vcxproj", "{00A8E2D8-2B20-4A18-87DC-16B6D81365F6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "generalContours_demo1", "generalContours_demo1\generalContours_demo1.vcxproj", "{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -271,6 +273,14 @@ Global
 		{00A8E2D8-2B20-4A18-87DC-16B6D81365F6}.Release|x64.Build.0 = Release|x64
 		{00A8E2D8-2B20-4A18-87DC-16B6D81365F6}.Release|x86.ActiveCfg = Release|Win32
 		{00A8E2D8-2B20-4A18-87DC-16B6D81365F6}.Release|x86.Build.0 = Release|Win32
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Debug|x64.ActiveCfg = Debug|x64
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Debug|x64.Build.0 = Debug|x64
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Debug|x86.ActiveCfg = Debug|Win32
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Debug|x86.Build.0 = Debug|Win32
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Release|x64.ActiveCfg = Release|x64
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Release|x64.Build.0 = Release|x64
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Release|x86.ActiveCfg = Release|Win32
+		{4FBB88D2-E3CE-473B-9559-0AB3A243AC9A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
