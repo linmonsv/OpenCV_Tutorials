@@ -63,6 +63,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "moments_demo", "moments_dem
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pointPolygonTest_demo", "pointPolygonTest_demo\pointPolygonTest_demo.vcxproj", "{12675FAE-7DD0-47C4-AE54-261C30030B01}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imageSegmentation", "imageSegmentation\imageSegmentation.vcxproj", "{93343A22-EEEE-40E0-BF02-A910923F8528}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -311,6 +313,14 @@ Global
 		{12675FAE-7DD0-47C4-AE54-261C30030B01}.Release|x64.Build.0 = Release|x64
 		{12675FAE-7DD0-47C4-AE54-261C30030B01}.Release|x86.ActiveCfg = Release|Win32
 		{12675FAE-7DD0-47C4-AE54-261C30030B01}.Release|x86.Build.0 = Release|Win32
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Debug|x64.ActiveCfg = Debug|x64
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Debug|x64.Build.0 = Debug|x64
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Debug|x86.ActiveCfg = Debug|Win32
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Debug|x86.Build.0 = Debug|Win32
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Release|x64.ActiveCfg = Release|x64
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Release|x64.Build.0 = Release|x64
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Release|x86.ActiveCfg = Release|Win32
+		{93343A22-EEEE-40E0-BF02-A910923F8528}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
