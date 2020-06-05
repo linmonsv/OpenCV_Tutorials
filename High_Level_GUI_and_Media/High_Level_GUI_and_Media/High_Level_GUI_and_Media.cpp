@@ -27,8 +27,15 @@ int main(void)
 	namedWindow("Linear Blend", WINDOW_AUTOSIZE); // Create Window
 	char TrackbarName[50];
 	sprintf_s(TrackbarName, "Alpha x %d", alpha_slider_max);
-	createTrackbar(TrackbarName, "Linear Blend", &alpha_slider, alpha_slider_max, on_trackbar);
-	on_trackbar(alpha_slider, 0);
+	//createTrackbar(TrackbarName, "Linear Blend", &alpha_slider, alpha_slider_max, on_trackbar);
+	createTrackbar(TrackbarName, "Linear Blend", &alpha_slider, alpha_slider_max, [] (int, void*)  
+		{
+			alpha = (double)alpha_slider / alpha_slider_max;
+			beta = (1.0 - alpha);
+			addWeighted(src1, alpha, src2, beta, 0.0, dst);
+			imshow("Linear Blend", dst);
+		});
+	//on_trackbar(alpha_slider, 0);
 	waitKey(0);
 	return 0;
 }
