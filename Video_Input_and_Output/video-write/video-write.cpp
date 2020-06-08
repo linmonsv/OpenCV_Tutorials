@@ -2,6 +2,7 @@
 #include <string>   // for strings
 #include <opencv2/core.hpp>     // Basic OpenCV structures (cv::Mat)
 #include <opencv2/videoio.hpp>  // Video write
+#include <opencv2/highgui.hpp>
 using namespace std;
 using namespace cv;
 static void help()
@@ -46,18 +47,18 @@ int main(int argc, char* argv[])
     if (!outputVideo.isOpened())
     {
         cout << "Could not open the output video for write: " << source << endl;
-        return -1;
+        //return -1;
     }
     cout << "Input frame resolution: Width=" << S.width << "  Height=" << S.height
         << " of nr#: " << inputVideo.get(CAP_PROP_FRAME_COUNT) << endl;
     cout << "Input codec type: " << EXT << endl;
     int channel = 2; // Select the channel to save
-    switch (argv[2][0])
+    /*switch (argv[2][0])
     {
     case 'R': channel = 2; break;
     case 'G': channel = 1; break;
     case 'B': channel = 0; break;
-    }
+    }*/
     Mat src, res;
     vector<Mat> spl;
     for (;;) //Show the image captured in the window and repeat
@@ -70,7 +71,9 @@ int main(int argc, char* argv[])
                 spl[i] = Mat::zeros(S, spl[0].type());
         merge(spl, res);
         //outputVideo.write(res); //save or
-        outputVideo << res;
+        //outputVideo << res;
+        imshow("Merge", res);
+        char c = (char)waitKey(10);
     }
     cout << "Finished writing" << endl;
     return 0;
