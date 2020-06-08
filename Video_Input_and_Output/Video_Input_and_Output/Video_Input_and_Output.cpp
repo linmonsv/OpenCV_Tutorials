@@ -28,12 +28,12 @@ int main(int argc, char* argv[])
     if (argc != 5)
     {
         cout << "Not enough parameters" << endl;
-        return -1;
+        //return -1;
     }
     stringstream conv;
-    const string sourceReference = argv[1], sourceCompareWith = argv[2];
+    const string sourceReference = "../../data/Megamind.avi", sourceCompareWith = "../../data/Megamind_bugy.avi";
     int psnrTriggerValue, delay;
-    conv << argv[3] << endl << argv[4];       // put in the strings
+    conv << 35 << endl << 10;       // put in the strings
     conv >> psnrTriggerValue >> delay;        // take out the numbers
     int frameNum = -1;          // Frame counter
     VideoCapture captRefrnc(sourceReference), captUndTst(sourceCompareWith);
