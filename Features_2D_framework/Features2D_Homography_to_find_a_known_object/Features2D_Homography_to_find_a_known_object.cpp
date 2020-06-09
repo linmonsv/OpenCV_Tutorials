@@ -12,8 +12,8 @@ using std::cout;
 using std::endl;
 const char* keys =
 "{ help h |                          | Print help message. }"
-"{ input1 | ../data/box.png          | Path to input image 1. }"
-"{ input2 | ../data/box_in_scene.png | Path to input image 2. }";
+"{ input1 | ../../data/box.png          | Path to input image 1. }"
+"{ input2 | ../../data/box_in_scene.png | Path to input image 2. }";
 int main(int argc, char* argv[])
 {
     CommandLineParser parser(argc, argv, keys);
