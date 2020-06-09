@@ -1,20 +1,52 @@
-// Feature_Description.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-
+#include "opencv2/core.hpp"
+#ifdef HAVE_OPENCV_XFEATURES2D
+#include "opencv2/highgui.hpp"
+#include "opencv2/features2d.hpp"
+#include "opencv2/xfeatures2d.hpp"
+using namespace cv;
+using namespace cv::xfeatures2d;
+using std::cout;
+using std::endl;
+const char* keys =
+"{ help h |                          | Print help message. }"
+"{ input1 | ../data/box.png          | Path to input image 1. }"
+"{ input2 | ../data/box_in_scene.png | Path to input image 2. }";
+int main(int argc, char* argv[])
+{
+    CommandLineParser parser(argc, argv, keys);
+    Mat img1 = imread(parser.get<String>("input1"), IMREAD_GRAYSCALE);
+    Mat img2 = imread(parser.get<String>("input2"), IMREAD_GRAYSCALE);
+    if (img1.empty() || img2.empty())
+    {
+        cout << "Could not open or find the image!\n" << endl;
+        parser.printMessage();
+        return -1;
+    }
+    //-- Step 1: Detect the keypoints using SURF Detector, compute the descriptors
+    int minHessian = 400;
+    Ptr<SURF> detector = SURF::create(minHessian);
+    std::vector<KeyPoint> keypoints1, keypoints2;
+    Mat descriptors1, descriptors2;
+    detector->detectAndCompute(img1, noArray(), keypoints1, descriptors1);
+    detector->detectAndCompute(img2, noArray(), keypoints2, descriptors2);
+    //-- Step 2: Matching descriptor vectors with a brute force matcher
+    // Since SURF is a floating-point descriptor NORM_L2 is used
+    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create(DescriptorMatcher::BRUTEFORCE);
+    std::vector< DMatch > matches;
+    matcher->match(descriptors1, descriptors2, matches);
+    //-- Draw matches
+    Mat img_matches;
+    drawMatches(img1, keypoints1, img2, keypoints2, matches, img_matches);
+    //-- Show detected matches
+    imshow("Matches", img_matches);
+    waitKey();
+    return 0;
+}
+#else
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "This tutorial code needs the xfeatures2d contrib module to be run." << std::endl;
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+#endif

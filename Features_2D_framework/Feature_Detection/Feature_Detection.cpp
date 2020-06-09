@@ -1,20 +1,40 @@
-// Feature_Detection.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-
+#include "opencv2/core.hpp"
+#ifdef HAVE_OPENCV_XFEATURES2D
+#include "opencv2/highgui.hpp"
+#include "opencv2/features2d.hpp"
+#include "opencv2/xfeatures2d.hpp"
+using namespace cv;
+using namespace cv::xfeatures2d;
+using std::cout;
+using std::endl;
+int main(int argc, char* argv[])
+{
+    CommandLineParser parser(argc, argv, "{@input | ../../data/box.png | input image}");
+    Mat src = imread(parser.get<String>("@input"), IMREAD_GRAYSCALE);
+    if (src.empty())
+    {
+        cout << "Could not open or find the image!\n" << endl;
+        cout << "Usage: " << argv[0] << " <Input image>" << endl;
+        return -1;
+    }
+    //-- Step 1: Detect the keypoints using SURF Detector
+    int minHessian = 400;
+    Ptr<SURF> detector = SURF::create(minHessian);
+    std::vector<KeyPoint> keypoints;
+    detector->detect(src, keypoints);
+    //-- Draw keypoints
+    Mat img_keypoints;
+    drawKeypoints(src, keypoints, img_keypoints);
+    //-- Show detected (drawn) keypoints
+    imshow("SURF Keypoints", img_keypoints);
+    waitKey();
+    return 0;
+}
+#else
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "This tutorial code needs the xfeatures2d contrib module to be run." << std::endl;
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+#endif
