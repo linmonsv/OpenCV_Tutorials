@@ -1,20 +1,52 @@
-// Harris_corner_detector.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
 #include <iostream>
-
-int main()
+using namespace cv;
+using namespace std;
+Mat src, src_gray;
+int thresh = 200;
+int max_thresh = 255;
+const char* source_window = "Source image";
+const char* corners_window = "Corners detected";
+void cornerHarris_demo(int, void*);
+int main(int argc, char** argv)
 {
-    std::cout << "Hello World!\n";
+    CommandLineParser parser(argc, argv, "{@input | ../../data/building.jpg | input image}");
+    src = imread(parser.get<String>("@input"));
+    if (src.empty())
+    {
+        cout << "Could not open or find the image!\n" << endl;
+        cout << "Usage: " << argv[0] << " <Input image>" << endl;
+        return -1;
+    }
+    cvtColor(src, src_gray, COLOR_BGR2GRAY);
+    namedWindow(source_window);
+    createTrackbar("Threshold: ", source_window, &thresh, max_thresh, cornerHarris_demo);
+    imshow(source_window, src);
+    cornerHarris_demo(0, 0);
+    waitKey();
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+void cornerHarris_demo(int, void*)
+{
+    int blockSize = 2;
+    int apertureSize = 3;
+    double k = 0.04;
+    Mat dst = Mat::zeros(src.size(), CV_32FC1);
+    cornerHarris(src_gray, dst, blockSize, apertureSize, k);
+    Mat dst_norm, dst_norm_scaled;
+    normalize(dst, dst_norm, 0, 255, NORM_MINMAX, CV_32FC1, Mat());
+    convertScaleAbs(dst_norm, dst_norm_scaled);
+    for (int i = 0; i < dst_norm.rows; i++)
+    {
+        for (int j = 0; j < dst_norm.cols; j++)
+        {
+            if ((int)dst_norm.at<float>(i, j) > thresh)
+            {
+                circle(dst_norm_scaled, Point(j, i), 5, Scalar(0), 2, 8, 0);
+            }
+        }
+    }
+    namedWindow(corners_window);
+    imshow(corners_window, dst_norm_scaled);
+}
