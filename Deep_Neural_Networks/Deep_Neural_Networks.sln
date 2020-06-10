@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deep_Neural_Networks", "Deep_Neural_Networks\Deep_Neural_Networks.vcxproj", "{1F66199B-C7A0-46F5-B3DC-69E2A57F911A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Load_Caffe_framework_models", "Load_Caffe_framework_models\Load_Caffe_framework_models.vcxproj", "{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{1F66199B-C7A0-46F5-B3DC-69E2A57F911A}.Release|x64.Build.0 = Release|x64
 		{1F66199B-C7A0-46F5-B3DC-69E2A57F911A}.Release|x86.ActiveCfg = Release|Win32
 		{1F66199B-C7A0-46F5-B3DC-69E2A57F911A}.Release|x86.Build.0 = Release|Win32
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Debug|x64.ActiveCfg = Debug|x64
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Debug|x64.Build.0 = Debug|x64
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Debug|x86.ActiveCfg = Debug|Win32
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Debug|x86.Build.0 = Debug|Win32
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Release|x64.ActiveCfg = Release|x64
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Release|x64.Build.0 = Release|x64
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Release|x86.ActiveCfg = Release|Win32
+		{3ED2DC43-B353-438F-95F8-FAAF686D5A3C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
