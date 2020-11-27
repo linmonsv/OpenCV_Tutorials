@@ -1,4 +1,5 @@
 #include <iostream>
+#include "opencv2/opencv.hpp"
 #include "opencv2/core.hpp"
 #ifdef HAVE_OPENCV_XFEATURES2D
 #include "opencv2/highgui.hpp"
@@ -50,7 +51,14 @@ int main(int argc, char* argv[])
     drawMatches(img1, keypoints1, img2, keypoints2, good_matches, img_matches, Scalar::all(-1),
         Scalar::all(-1), std::vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS);
     //-- Show detected matches
-    imshow("Good Matches", img_matches);
+    //imshow("Good Matches", img_matches);
+    {
+        double fScale = 0.3;
+        Size dsize = Size(img_matches.cols * fScale, img_matches.rows * fScale);
+        Mat imagedst = Mat(dsize, CV_32S);
+        cv::resize(img_matches, imagedst, dsize);
+        imshow("Good Matches Scale = 0.3", imagedst);
+    }
     waitKey();
     return 0;
 }
